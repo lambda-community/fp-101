@@ -31,6 +31,7 @@ defmodule KVServer do
 
   defp read_line(socket) do
     {:ok, data} = :gen_tcp.recv(socket, 0)
+    IO.inspect(is_binary(data))
     data
   end
 
